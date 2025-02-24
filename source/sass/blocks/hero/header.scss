@@ -1,0 +1,170 @@
+.header__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 290px;
+  margin: 0;
+  padding: 0;
+  padding-top: 21px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 678px;
+    padding-top: 31px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 1240px;
+  }
+}
+
+.header__logo-wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.header__logo-link {
+  display: block;
+  width: 52px;
+  height: 52px;
+  margin: 0;
+  padding: 12px 11px;
+  background-color: $base-white;
+  border: none;
+  border-radius: 30px;
+  cursor: auto;
+}
+
+.header__logo-image {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.header__nav-wrap {
+  position: relative;
+  max-width: 290px;
+  z-index: 6;
+}
+
+.header__button-wrap {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  z-index: 7;
+}
+
+.header__button-menu {
+  position: absolute;
+  top: -32px;
+  right: 0;
+  margin: 0;
+  padding: 19px 21px;
+  font-weight: 500;
+  line-height: 14px;
+  text-align: left;
+  text-transform: uppercase;
+  border: 1px solid $base-blue;
+  border-radius: 30px;
+  transition-duration: 0.3s;
+  cursor: pointer;
+  z-index: 3;
+
+  &--closed {
+    min-width: 136px;
+    color: $base-blue;
+    background-color: $base-white;
+
+    &:hover {
+      color: $base-white;
+      background-color: $base-blue;
+    }
+
+    &:focus {
+      color: $base-blue;
+      background-color: transparent;
+    }
+
+    &:active {
+      color: $base-white-medium-opacity;
+      background-color: $base-blue;
+    }
+  }
+
+  &--opened {
+    min-width: 290px;
+    color: $base-white;
+    background-color: $base-blue;
+  }
+}
+
+.header__icon-toggle {
+  position: absolute;
+  display: block;
+  top: 4px;
+  right: 4px;
+  width: 46px;
+  height: 46px;
+  background-color: $base-blue;
+  border: none;
+  border-radius: 44px;
+  transition-duration: 0.3s;
+
+  &--opened {
+    background-color: $base-white;
+  }
+
+  &--closed::before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 8px;
+    transform: translate(-50%, -50%) rotate(360deg);
+    background-color: $base-white;
+    mask-image: url("/__spritemap#sprite-icon-burger-menu-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 18px 8px;
+    transition-duration: 300ms;
+  }
+
+  &--opened::before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, -50%);
+    background-color: $base-blue;
+    mask-image: url("/__spritemap#sprite-icon-cross-menu-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 20px 20px;
+    transition-duration: 300ms;
+  }
+}
+
+.header__button-menu:hover > .header__icon-toggle,
+.header__button-menu:focus > .header__icon-toggle {
+  background-color: $base-white;
+}
+
+.header__button-menu:active > .header__icon-toggle {
+  background-color: $base-blue;
+}
+
+.header__button-menu:hover > .header__icon-toggle--closed::before,
+.header__button-menu:focus > .header__icon-toggle--closed::before {
+  background-color: $base-blue;
+}
+
+.header__button-menu:active > .header__icon-toggle--closed::before {
+  background-color: $base-white;
+}

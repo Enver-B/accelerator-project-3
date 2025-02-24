@@ -1,0 +1,323 @@
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.modal-form__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 260px;
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    gap: 20px;
+    min-width: 350px;
+    margin-bottom: 30px;
+  }
+}
+
+.modal-form__field-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    gap: 12px;
+  }
+}
+
+.modal-form__label {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0;
+  color: $primary-medium-color;
+
+  @media (min-width: $tablet-width) {
+    line-height: 20px;
+  }
+}
+
+.modal-form__input {
+  width: 100%;
+  margin: 0;
+  padding: 12px 20px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0;
+  color: $primary-color;
+  background-color: $base-white;
+  border: 1px solid $primary-medium-dark-color;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &--error {
+    background-color: $base-red-erorr-opacity;
+    border: 1px solid $base-red-erorr;
+    border-radius: 8px;
+  }
+
+  &:hover {
+    border: 1px solid $primary-color;
+  }
+
+  &:focus,
+  &:active {
+    border: 1px solid $primary-color;
+  }
+
+  &:disabled {
+    background-color: $base-gray-bg-disabled;
+    border: $base-gray-border-disabled;
+    pointer-events: none;
+    cursor: default;
+  }
+
+  &:valid {
+    background-color: $base-white;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 15px 20px;
+  }
+}
+
+.modal-form__field-checkbox-wrap {
+  position: relative;
+}
+
+.modal-form__checkbox-text {
+  display: block;
+  max-width: 230px;
+  margin: 0;
+  margin-top: 4px;
+  padding: 0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0;
+  color: $primary-light-color;
+
+  @media (min-width: $tablet-width) {
+    max-width: 304px;
+  }
+}
+
+.modal-form__checkbox-label {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.modal-form__checkbox-input[type="checkbox"]:checked + .modal-form__checkbox-mark::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 8px;
+  transform: translate(-50%, -50%);
+  background-color: $base-white;
+  mask-image: url("/__spritemap#sprite-icon-check-view");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 10px 8px;
+}
+
+.modal-form__checkbox-mark {
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: $base-blue;
+  border: 1px solid $base-blue;
+  border-radius: 2px;
+
+  @media (min-width: $tablet-width) {
+    top: 0;
+  }
+
+  &--erorr {
+    background-color: $base-red-erorr-opacity;
+    border-color: $base-red-erorr;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $base-blue;
+    border: 1px solid $base-white;
+  }
+}
+
+.modal-form__checkbox-input:hover + .modal-form__checkbox-mark {
+  background-color: $base-blue;
+  border: 1px solid $base-white;
+}
+
+
+.modal-form__checkbox-input[type="checkbox"]:hover:checked + .modal-form__checkbox-mark::before {
+  background-color: $base-white;
+}
+
+.modal-form__checkbox-input[type="checkbox"]:hover:checked + .modal-form__checkbox-mark {
+  background-color: $base-blue;
+}
+
+.modal-form__checkbox-input[type="checkbox"]:focus:checked + .modal-form__checkbox-mark {
+  background-color: $base-blue;
+}
+
+.modal-form__checkbox-input[type="checkbox"]:focus:checked + .modal-form__checkbox-mark::before {
+  background-color: $base-white;
+}
+
+.modal-form__checkbox-input[type="checkbox"]:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.modal-form__checkbox-input[type="checkbox"]:checked:disabled + .modal-form__checkbox-mark {
+  background-color: $base-gray-disabled;
+}
+
+.modal-form__checkbox-input[type="checkbox"]:checked:disabled + .modal-form__checkbox-mark::before {
+  background-color: $base-white;
+}
+
+.modal-form__checkbox-input[type="checkbox"]:disabled + .modal-form__checkbox-mark {
+  background-color: $base-white-middle-opacity;
+  border-color: $base-white;
+  pointer-events: none;
+  cursor: default;
+}
+
+.modal-form__button {
+  position: relative;
+  display: block;
+  min-width: 260px;
+  margin: 0;
+  padding: 15px 69px 15px 31px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 12px;
+  letter-spacing: 0.02em;
+  color: $base-blue;
+  background-color: $base-white;
+  text-transform: uppercase;
+  border: 1px solid $base-blue;
+  border-radius: 30px;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 4px;
+    right: 4px;
+    width: 34px;
+    height: 34px;
+    background-color: $base-blue;
+    border: none;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    cursor: pointer;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 50%;
+    right: 11px;
+    width: 10px;
+    height: 10px;
+    transform: translate(-50%, -50%);
+    background-color: $base-white;
+    mask-image: url("/__spritemap#sprite-icon-button-blue-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 10px 10px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  &:hover {
+    color: $base-white;
+    background-color: $base-blue;
+    border: 1px solid $base-blue;
+  }
+
+  &:focus {
+    color: $base-blue;
+    background-color: $base-white;
+    border: 1px solid $base-blue;
+  }
+
+  &:active {
+    color: $base-white-medium-opacity;
+    background-color: $base-blue;
+    border: 1px solid $base-blue;
+  }
+
+  &:disabled {
+    color: $base-gray-disabled;
+    border-color: $base-gray-disabled;
+    pointer-events: none;
+    cursor: default;
+  }
+
+  &:hover::before {
+    background-color: $base-white;
+  }
+
+  &:focus::before {
+    background-color: $base-blue;
+  }
+
+  &:active::before {
+    background-color: $base-white;
+  }
+
+  &:disabled::before {
+    background-color: $base-gray-disabled;
+  }
+
+  &:hover::after {
+    background-color: $base-blue;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &:focus::after {
+    background-color: $base-white;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &:active::after {
+    background-color: $base-light-blue;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &:disabled::after {
+    background-color: $base-white-middle-opacity;
+  }
+
+  @media (min-width: $tablet-width) {
+    max-width: 194px;
+  }
+}

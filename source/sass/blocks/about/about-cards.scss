@@ -1,0 +1,219 @@
+.about-cards__wrap {
+  max-width: 290px;
+  margin: 0;
+  padding: 20px 20px 40px 0;
+  background-color: $base-blue;
+  border: none;
+  border-radius: 20px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 678px;
+    padding: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1240px;
+    padding: 50px 100px;
+    padding-top: 51px;
+    padding-bottom: 49px;
+  }
+}
+
+.about-cards__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 32px;
+  }
+}
+
+.about-cards__item {
+  position: relative;
+  max-width: 250px;
+  min-height: auto;
+  margin: 0;
+  margin-top: 22px;
+  margin-left: 20px;
+  padding: 15px 21px;
+  border: 1px solid $base-pale-gray-yellow;
+  border-radius: 16px;
+  z-index: 1;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -21px;
+    left: -21px;
+    width: 42px;
+    height: 42px;
+    background-color: $base-blue;
+    z-index: 2;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: -13px;
+    left: -10px;
+    width: 18px;
+    height: 22px;
+    margin: 0;
+    padding: 10px;
+    background-color: $base-white;
+    mask-image: url("/__spritemap#sprite-icon-star-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 18px 22px;
+    z-index: 3;
+  }
+
+  @media (min-width: $tablet-width) {
+    align-self: stretch;
+    min-width: 253px;
+    min-height: 171px;
+
+    &::before {
+      top: -23px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 484px;
+    min-height: auto;
+    padding: 30px 41px;
+  }
+}
+
+.about-cards__text-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 250px;
+  margin: 0;
+  padding: 0;
+
+  &--award-grant h5 {
+    max-width: 105px;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-width: 211px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    align-items: center;
+    min-width: 402px;
+  }
+}
+
+.about-cards__text-wrap h5 {
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.16px;
+  color: $base-white;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    max-width: 130px;
+    margin-top: 1px;
+    margin-bottom: 14px;
+    margin-left: -1px;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 0.2px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 163px;
+    margin-bottom: 0;
+    font-size: 26px;
+    line-height: 30px;
+    letter-spacing: 0.26px;
+  }
+}
+
+.about-cards__text-wrap p {
+  max-width: 208px;
+  margin: 0;
+  padding: 0;
+  font-weight: 200;
+  letter-spacing: 0;
+  color: $bg-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 192px;
+    margin-right: 10px;
+  }
+}
+
+.about-cards__text-programs-wrap p {
+  @media (min-width: $desktop-width) {
+    max-width: 190px;
+  }
+}
+
+.about-cards__text-participants-wrap p {
+  @media (min-width: $desktop-width) {
+    max-width: 188px;
+    margin-right: 12px;
+  }
+}
+
+.about-cards__text-wrap br {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.about-cards__text-wrap span {
+  display: inline;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    word-wrap: break-word;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+    word-wrap: normal;
+  }
+}
+
+.about-cards__text-participants-wrap span {
+  @media (min-width: $desktop-width) {
+    display: block;
+    word-wrap: break-word;
+  }
+}
+
+.about-cards__text-wrap strong {
+  @media (min-width: $desktop-width) {
+    display: block;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0;
+    word-wrap: break-word;
+  }
+}

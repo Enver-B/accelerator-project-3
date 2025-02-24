@@ -1,0 +1,11 @@
+.primary-button {
+  position: relative;
+  display: block;
+  color: $base-blue;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid $base-blue;
+  border-radius: 30px;
+  cursor: pointer;
+}

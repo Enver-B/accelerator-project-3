@@ -1,0 +1,52 @@
+.footer-nav__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px 30px;
+  margin: 0;
+  margin-bottom: 21px;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    gap: 15px;
+    min-width: 529px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 30px;
+    margin-bottom: -1px;
+  }
+}
+
+.footer-nav__link {
+  display: block;
+  margin: 0;
+  padding: 0;
+  color: $primary-color;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    color: $base-medium-blue;
+  }
+
+  &:focus {
+    color: $base-blue;
+  }
+
+  &:active {
+    color: $base-dark-blue;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 17px;
+  }
+}

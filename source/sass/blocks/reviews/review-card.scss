@@ -1,0 +1,221 @@
+.review-card__wrap {
+  max-width: 290px;
+  min-height: 472px;
+  margin: 0;
+  padding: 30px 15px;
+  border: 2px solid $base-blue;
+  border-radius: 16px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 560px;
+    min-height: 417px;
+    padding: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 604px;
+    min-height: 483px;
+    padding: 51px 49px 49px 50px;
+  }
+}
+
+.review-card__client-data {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 31px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.review-card__figure {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    gap: 15px;
+  }
+}
+
+.review-card__image {
+  display: block;
+  width: 60px;
+  height: 60px;
+
+  @media (min-width: $tablet-width) {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+.review-card__figcaption {
+  max-width: 40px;
+  margin: 0;
+  padding: 0;
+  line-height: 18px;
+  text-align: left;
+  color: $base-blue;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+  }
+}
+
+.review-card__personal-data-wrap {
+  margin: 0;
+  padding: 0;
+}
+
+.review-card__personal-data {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.review-card__personal-data-part {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    gap: 11px;
+  }
+}
+
+.review-card__program,
+.review-card__date {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.12px;
+  color: $base-blue;
+  text-transform: uppercase;
+}
+
+.review-card__text-meaning {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  line-height: 14px;
+  color: $primary-light-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 18px;
+  }
+}
+
+.review-card__blockquote {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: left;
+  color: $base-blue;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 24px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+    line-height: 26px;
+  }
+}
+
+.review-card__blockquote br {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.review-card__text-wrap p {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 467px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+
+.review-card__text-wrap br {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.review-card__text-wrap span {
+  display: inline;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+  }
+}
+
+.review-card__text-wrap strong {
+  display: inline;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    word-wrap: normal;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    font-weight: 400;
+    line-height: 26px;
+    word-wrap: break-word;
+  }
+}

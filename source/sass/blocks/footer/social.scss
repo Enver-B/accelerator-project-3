@@ -1,0 +1,138 @@
+.social__list {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 98px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    max-width: 128px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 20px;
+    max-width: 148px;
+  }
+}
+
+.social__link {
+  position: relative;
+  display: block;
+  width: 26px;
+  height: 26px;
+  background-color: $base-blue;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $base-blue;
+  }
+
+  &:focus {
+    background-color: $base-white;
+  }
+
+  &:active {
+    background-color: $base-dark-blue;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.social__link-vk {
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 12px;
+    background-color: $base-white;
+    mask-image: url("/__spritemap#sprite-icon-vk-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 16px 12px;
+  }
+
+  &:hover::after {
+    background-color: $base-white-medium-opacity;
+  }
+
+  &:focus::after {
+    background-color: $base-blue;
+  }
+
+  &:active::after {
+    background-color: $base-white;
+  }
+}
+
+.social__link-ok {
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    background-color: $base-white;
+    mask-image: url("/__spritemap#sprite-icon-ok-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 16px 16px;
+  }
+
+  &:hover::after {
+    background-color: $base-white-medium-opacity;
+  }
+
+  &:focus::after {
+    background-color: $base-blue;
+  }
+
+  &:active::after {
+    background-color: $base-white;
+  }
+}
+
+.social__link-pinterest {
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    background-color: $base-white;
+    mask-image: url("/__spritemap#sprite-icon-pinterest-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 16px 16px;
+  }
+
+  &:hover::after {
+    background-color: $base-white-medium-opacity;
+  }
+
+  &:focus::after {
+    background-color: $base-blue;
+  }
+
+  &:active::after {
+    background-color: $base-white;
+  }
+}

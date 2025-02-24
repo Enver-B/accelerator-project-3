@@ -1,0 +1,323 @@
+.faq-card__wrap {
+  margin: 0;
+  background-color: $base-blue;
+  border-radius: 14px;
+
+  @media (min-width: $desktop-width) {
+    min-width: 1028px;
+  }
+}
+
+.faq-card__wrap--active .faq-card__accordion-button {
+  background-color: $base-blue;
+  border: 2px solid #316dc2;
+  border-radius: 14px;
+  transition: background-color 0.3s ease-out;
+}
+
+.faq-card__wrap--active .faq-card__accordion-button-name {
+  color: $base-white;
+  transition: color 0.3s ease-out;
+}
+
+.faq-card__wrap--active .faq-card__accordion-button-icon {
+  background-color: $base-white;
+  transition: background-color 0.3s ease-out;
+}
+
+.faq-card__accordion-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 290px;
+  margin: 0;
+  padding-top: 20px;
+  padding-right: 15px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  background-color: $base-pale-gray-yellow;
+  border: 2px solid #316dc2;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, padding-bottom 0.3s ease;
+
+  &--active {
+    padding-top: 20px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    transition: padding-bottom 0.3s ease;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-width: 678px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    border-radius: 16px;
+
+    &--active {
+      padding-top: 30px;
+      padding-right: 30px;
+      padding-bottom: 20px;
+      padding-left: 30px;
+      transition: padding-bottom 0.3s ease;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 1028px;
+    padding-top: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+
+    &--active {
+      padding-top: 40px;
+      padding-right: 40px;
+      padding-bottom: 20px;
+      padding-left: 40px;
+      transition: padding-bottom 0.3s ease;
+    }
+  }
+}
+
+.faq-card__accordion-button-name {
+  display: block;
+  max-width: 187px;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  color: $base-blue;
+
+  @media (min-width: $tablet-width) {
+    max-width: 470px;
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 800px;
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
+
+.faq-card__accordion-button-name-studies {
+  @media (min-width: $tablet-width) {
+    max-width: 406px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 800px;
+  }
+}
+
+.faq-card__accordion-button-name br {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.faq-card__accordion-button-icon {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: $base-blue;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  &--closed:hover,
+  &--closed:focus {
+    background-color: $base-pale-gray-yellow;
+    border: 1px solid $base-blue;
+  }
+
+  &--closed:active {
+    background-color: $base-dark-blue;
+    border: 1px solid $base-dark-blue;
+  }
+
+  &--opened:hover,
+  &--opened:focus {
+    background-color: $base-pale-gray-yellow;
+    border: 1px solid $base-white;
+  }
+
+  &--opened:active {
+    background-color: $base-white;
+    border: 1px solid $base-white;
+  }
+
+  &--disabled {
+    background-color: $base-gray-disabled;
+    pointer-events: none;
+    cursor: default;
+  }
+
+  &--closed::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 1px;
+    transform: translate(-50%, -50%);
+    background-color: $base-white;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  &--closed:hover::before,
+  &--closed:focus::before {
+    background-color: $base-blue;
+  }
+
+  &--closed:active::before {
+    background-color: $base-white;
+  }
+
+  &--closed::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 1px;
+    transform: translate(-50%, -50%) rotate(90deg);
+    background-color: $base-white;
+    transition: transform 1s ease, background-color 0.3s ease;
+  }
+
+  &--closed:hover::after,
+  &--closed:focus::after {
+    background-color: $base-blue;
+  }
+
+  &--closed:active::after {
+    background-color: $base-white;
+  }
+
+  &--opened::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 1px;
+    transform: translate(-50%, -50%) rotate(-180deg);
+    background-color: $base-blue;
+    transition: transform 1s ease, background-color 0.3s ease;
+  }
+
+  &--opened:hover::before,
+  &--opened:focus::before {
+    background-color: $base-white;
+  }
+
+  &--opened:active::before {
+    background-color: $base-dark-blue;
+  }
+
+  &--opened::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 1px;
+    transform: translate(-50%, -50%) rotate(180deg);
+    background-color: $base-blue;
+    transition: transform 1s ease, background-color 0.3s ease;
+  }
+
+  &--opened:hover::after,
+  &--opened:focus::after {
+    background-color: $base-white;
+  }
+
+  &--opened:active::after {
+    background-color: $base-dark-blue;
+  }
+
+  @media (min-width: $tablet-width) {
+    align-self: flex-start;
+  }
+}
+
+.faq-card__text-wrap {
+  max-width: 290px;
+  overflow: hidden;
+  height: 0;
+  transition: height 0.3s ease-out;
+
+  @media (min-width: $tablet-width) {
+    max-width: 678px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1028px;
+  }
+}
+
+.faq-card__text-wrap p {
+  display: block;
+  max-width: 270px;
+  margin: 0;
+  margin-top: -2px;
+  padding: 0 17px 22px;
+  font-weight: 400;
+  text-align: left;
+  color: $base-pale-gray-yellow;
+
+  @media (min-width: $tablet-width) {
+    max-width: 678px;
+    padding-top: 0;
+    padding-right: 32px;
+    padding-bottom: 32px;
+    padding-left: 32px;
+    font-size: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 1028px;
+    padding-right: 42px;
+    padding-bottom: 42px;
+    padding-left: 42px;
+    line-height: 26px;
+  }
+}
+
+.faq-card__text-wrap--active p {
+  height: auto;
+}
+
+.faq-card__text-wrap br {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.faq-card__text-wrap span {
+  display: inline;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    word-wrap: break-word;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+    word-wrap: normal;
+  }
+}

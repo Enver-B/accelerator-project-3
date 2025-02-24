@@ -1,0 +1,200 @@
+.programs-card__wrap {
+  position: relative;
+  display: block;
+  width: 290px;
+  height: 400px;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    width: 324px;
+    height: 420px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 392px;
+    height: 420px;
+  }
+}
+
+.programs-card__image-wrap {
+  position: relative;
+  display: block;
+  width: 290px;
+  height: 400px;
+
+  @media (min-width: $tablet-width) {
+    width: 324px;
+    height: 420px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 392px;
+    height: 420px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $base-light-blue-opacity;
+  }
+}
+
+.programs-card__image {
+  position: absolute;
+  display: block;
+  width: 290px;
+  height: 400px;
+
+  @media (min-width: $tablet-width) {
+    width: 324px;
+    height: 420px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 392px;
+    height: 420px;
+  }
+}
+
+.programs-card__content-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $desktop-width) {
+    align-items: flex-start;
+    margin-left: 20px;
+  }
+}
+
+.programs-card__content {
+  position: absolute;
+  display: block;
+  bottom: 18px;
+  z-index: 3;
+
+  @media (min-width: $tablet-width) {
+    bottom: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    bottom: 17px;
+  }
+}
+
+.programs-card__title {
+  position: relative;
+  display: block;
+  max-width: 146px;
+  margin: 0;
+  padding: 18px 35px 6px 18px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0;
+  color: $base-blue;
+  background-color: $base-white;
+  border: none;
+  border-radius: 12px 12px 0 0;
+
+  &::after {
+    position: absolute;
+    content: "";
+    right: -17px;
+    bottom: 0;
+    width: 18px;
+    height: 18px;
+    background-color: $base-white;
+    mask-image: url("/__spritemap#sprite-programs-angle-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 18px 18px;
+  }
+
+  @media (min-width: $tablet-width) {
+    max-width: 173px;
+    font-size: 20px;
+    line-height: 14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 194px;
+    font-size: 24px;
+    line-height: 17px;
+  }
+}
+
+.programs-card__text-wrap {
+  position: relative;
+  margin: 0;
+  padding: 12px 64px 15px 18px;
+  max-width: 270px;
+  min-height: 69px;
+  background-color: $base-white;
+  border: none;
+  border-radius: 0 12px 12px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 284px;
+    min-height: 87px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    align-items: center;
+    min-height: 82px;
+    min-width: 321px;
+  }
+}
+
+.programs-card__text-wrap p {
+  max-width: 188px;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0;
+
+  @media (min-width: $tablet-width) {
+    max-width: 196px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 233px;
+    line-height: 18px;
+  }
+}
+
+.programs-card__link {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 30px;
+  height: 30px;
+
+  &--disabled {
+    background-color: $base-gray-disabled;
+    pointer-events: none;
+    cursor: default;
+  }
+
+  @media (min-width: $tablet-width) {
+    top: 27px;
+    right: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 24px;
+  }
+}

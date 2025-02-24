@@ -1,0 +1,35 @@
+.hero__wrap {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    max-width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1440px;
+  }
+}
+
+.hero__header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 0;
+  z-index: 5;
+
+  @media (min-width: $tablet-width) {
+    max-width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1440px;
+  }
+}

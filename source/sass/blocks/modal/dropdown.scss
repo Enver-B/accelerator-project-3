@@ -1,0 +1,134 @@
+.dropdown {
+  position: relative;
+
+  &--error {
+    color: $base-red-erorr;
+    background-color: $base-red-erorr-opacity;
+    border: 1px solid $base-red-erorr;
+    border-radius: 8px;
+  }
+}
+
+.dropdown--active .dropdown__list {
+  display: block;
+}
+
+.dropdown__input {
+  width: 100%;
+  min-height: 44px;
+  margin: 0;
+  padding-top: 12px;
+  padding-right: 50px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0;
+  color: $primary-color;
+  border-radius: 8px;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    min-height: 50px;
+    padding-top: 15px;
+    padding-right: 50px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+  }
+}
+
+.dropdown__list {
+  position: absolute;
+  display: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: $base-white;
+  z-index: 3;
+}
+
+.dropdown__item {
+  display: block;
+  margin: 0;
+  padding-top: 12px;
+  padding-right: 50px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0;
+  color: $primary-color;
+  background-color: $base-white;
+  cursor: pointer;
+
+  &:hover {
+    color: $base-blue;
+  }
+
+  &:focus,
+  &:active {
+    color: $base-white;
+    background-color: $base-blue;
+  }
+}
+
+.dropdown__item-current {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0;
+  color: $primary-color;
+  background-color: $base-white;
+  cursor: pointer;
+}
+
+.dropdown__icon {
+  position: absolute;
+  cursor: pointer;
+
+  &--closed::after {
+    position: absolute;
+    content: "";
+    top: 22px;
+    left: -30px;
+    width: 16px;
+    height: 7px;
+    background-color: $primary-color;
+    mask-image: url("/__spritemap#sprite-icon-select-down-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 16px 7px;
+  }
+
+  &--opened::after {
+    position: absolute;
+    content: "";
+    top: 22px;
+    left: -30px;
+    width: 16px;
+    height: 7px;
+    background-color: $primary-color;
+    mask-image: url("/__spritemap#sprite-icon-select-up-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 16px 7px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--closed::after {
+      top: 22px;
+      left: -30px;
+    }
+
+    &--opened::after {
+      top: 22px;
+      left: -30px;
+    }
+  }
+}

@@ -1,0 +1,134 @@
+.dropdown-form {
+  position: relative;
+
+  &--error {
+    color: $base-red-erorr;
+    background-color: $base-red-erorr-opacity;
+    border: 1px solid $base-red-erorr;
+    border-radius: 8px;
+  }
+}
+
+.dropdown-form--active .dropdown-form__list {
+  display: block;
+}
+
+.dropdown-form__input {
+  min-width: 260px;
+  min-height: 52px;
+  margin: 0;
+  padding-top: 12px;
+  padding-right: 50px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0;
+  color: $base-white;
+  border: 1px solid $base-medium-dark-opacity;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &--error {
+    background-color: $base-red-erorr-opacity;
+    border: 1px solid $base-red-erorr;
+    border-radius: 8px;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-width: 362px;
+    min-height: 50px;
+    padding-top: 15px;
+    padding-right: 50px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 350px;
+    min-height: 52px;
+  }
+}
+
+.dropdown-form__list {
+  position: absolute;
+  display: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: $base-white;
+  z-index: 3;
+}
+
+.dropdown-form__item {
+  display: block;
+  margin: 0;
+  padding-top: 12px;
+  padding-right: 50px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0;
+  color: $primary-color;
+  background-color: $base-white;
+  cursor: pointer;
+
+  &:hover {
+    color: $base-blue;
+  }
+
+  &:focus,
+  &:active {
+    color: $base-white;
+    background-color: $base-blue;
+  }
+}
+
+.dropdown-form__icon {
+  position: relative;
+  cursor: pointer;
+
+  &--closed::after {
+    position: absolute;
+    content: "";
+    top: 6px;
+    left: -37px;
+    width: 16px;
+    height: 7px;
+    background-color: $base-white;
+    mask-image: url("/__spritemap#sprite-icon-select-down-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 16px 8px;
+  }
+
+  &--opened::after {
+    position: absolute;
+    content: "";
+    top: 6px;
+    left: -37px;
+    width: 16px;
+    height: 7px;
+    background-color: $base-white;
+    mask-image: url("/__spritemap#sprite-icon-select-up-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 16px 8px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--closed::after {
+      top: 6px;
+      left: -37px;
+    }
+
+    &--opened::after {
+      top: 6px;
+      left: -37px;
+    }
+  }
+}

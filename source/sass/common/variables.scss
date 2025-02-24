@@ -1,0 +1,39 @@
+/* Colors */
+
+$primary-color: #484848;
+$primary-medium-dark-color: rgba(72, 72, 72, 0.3);
+$primary-middle-color: rgba(72, 72, 72, 0.6);
+$primary-medium-color: rgba(72, 72, 72, 0.8);
+$primary-light-color: rgba(72, 72, 72, 0.9);
+$bg-color: #f0efe9;
+$base-white: #ffffff;
+$base-white-light-opacity: rgba(255, 255, 255, 0.9);
+$base-white-medium-opacity: rgba(255, 255, 255, 0.7);
+$base-white-middle-opacity: rgba(255, 255, 255, 0.6);
+$base-medium-dark-opacity: rgba(255, 255, 255, 0.3);
+$base-dark-opacity: rgba(255, 255, 255, 0.2);
+$base-pale-gray-yellow: #f0efe9;
+$base-pale-gray-yellowlight-opacity: rgba(240, 239, 233, 0.8);
+$base-gray-disabled: #a9afb7;
+$base-gray-bg-disabled: rgba(169, 175, 183, 0.2);
+$base-gray-border-disabled: rgba(169, 175, 183, 0.5);
+$base-blue: #316dc2;
+$base-medium-blue: rgba(49, 109, 194, 0.7);
+$base-middle-blue: rgba(49, 109, 194, 0.6);
+$base-half-blue: rgba(49, 109, 194, 0.5);
+$base-light-blue-opacity: rgba(49, 109, 194, 0.2);
+$base-light-blue: #c1d3ed;
+$base-dark-blue: #275699;
+$base-dark-gray: #484848;
+$base-red-erorr: #ff5e66;
+$base-red-erorr-opacity: rgba(255, 94, 102, 0.2);
+$base-dark-overlay: rgba(13, 29, 51, 0.4);
+
+/* Viewports */
+
+$before-mobile-with: 319px;
+$mobile-width: 320px;
+$mobile-width-only: 767px;
+$tablet-width: 768px;
+$desktop-width-only: 1439px;
+$desktop-width: 1440px;

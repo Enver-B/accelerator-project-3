@@ -1,4 +1,46 @@
 // Vendor
-// ---------------------------------
 
 @import "vendor/normalize";
+
+// Common
+
+@import "./common/variables";
+@import "./common/mixins";
+@import "./common/fonts";
+@import "./common/global";
+
+// blocks
+
+@import "./blocks/main";
+@import "./blocks/visually-hidden";
+@import "./blocks/hero/hero";
+@import "./blocks/hero/header";
+@import "./blocks/hero/hero-slider";
+@import "./blocks/container";
+@import "./blocks/primary-button";
+@import "./blocks/primary-icon";
+@import "./blocks/hero/main-nav";
+@import "./blocks/hero/programs-submenu";
+@import "./blocks/hero/news-submenu";
+@import "./blocks/about/about";
+@import "./blocks/about/about-cards";
+@import "./blocks/programs/programs";
+@import "./blocks/programs/programs-card";
+@import "./blocks/grant/grant";
+@import "./blocks/news/news";
+@import "./blocks/news/news-nav";
+@import "./blocks/news/news-card";
+@import "./blocks/faq/faq";
+@import "./blocks/faq/faq-card";
+@import "./blocks/reviews/reviews";
+@import "./blocks/reviews/review-card";
+@import "./blocks/contacts/contacts";
+@import "./blocks/form/form";
+@import "./blocks/form/form-write-to-us";
+@import "./blocks/form/dropdown-form";
+@import "./blocks/footer/footer";
+@import "./blocks/footer/footer-nav";
+@import "./blocks/footer/social";
+@import "./blocks/modal/modal";
+@import "./blocks/modal/modal-form";
+@import "./blocks/modal/dropdown";

@@ -1,0 +1,388 @@
+.form-write-to-us__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0;
+  margin-bottom: 18px;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.form-write-to-us__field-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 11px;
+  margin: 0;
+  padding: 0;
+}
+
+.form-write-to-us__label {
+  margin: 0;
+  margin-top: 1px;
+  padding: 0;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: left;
+  color: $base-pale-gray-yellow;
+  opacity: 0.8;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+    line-height: 18px;
+  }
+}
+
+.form-write-to-us__input,
+.form-write-to-us__textarea {
+  width: 100%;
+  margin: 0;
+  padding: 16px 25px;
+  color: $base-white;
+  background-color: $base-blue;
+  border: 1px solid $base-medium-dark-opacity;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &--error {
+    background-color: $base-red-erorr-opacity;
+    border: 1px solid $base-red-erorr;
+    border-radius: 8px;
+  }
+
+  &:hover {
+    border: 1px solid $base-white;
+  }
+
+  &:focus,
+  &:active {
+    border: 1px solid $base-white;
+  }
+
+  &:disabled {
+    background-color: $base-medium-dark-opacity;
+    border: $base-dark-opacity;
+    pointer-events: none;
+    cursor: default;
+  }
+
+  &:valid {
+    background-color: $base-blue;
+  }
+}
+
+.form-write-to-us__textarea {
+  padding: 14px 25px;
+  padding-bottom: 13px;
+  resize: none;
+
+  &--error {
+    background-color: $base-red-erorr-opacity;
+    border: 1px solid $base-red-erorr;
+    border-radius: 8px;
+  }
+
+  &:hover {
+    border: 1px solid $base-white;
+  }
+
+  &:focus,
+  &:active {
+    border: 1px solid $base-white;
+  }
+
+  &:disabled {
+    background-color: $base-medium-dark-opacity;
+    border: $base-dark-opacity;
+    pointer-events: none;
+    cursor: default;
+  }
+
+  &:valid {
+    background-color: $base-blue;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 11px 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 12px;
+    padding-right: 25px;
+    padding-bottom: 12px;
+    padding-left: 25px;
+  }
+}
+
+.form-write-to-us__field-checkbox-wrap {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 4px;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 25px;
+  }
+}
+
+.form-write-to-us__checkbox-label {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.form-write-to-us__checkbox-mark {
+  position: absolute;
+  content: "";
+  top: 11px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: $base-white;
+  border: 1px solid $base-white-medium-opacity;
+  border-radius: 2px;
+  cursor: pointer;
+
+  &--erorr {
+    background-color: $base-red-erorr-opacity;
+    border-color: $base-red-erorr;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $base-blue;
+  }
+
+  @media (min-width: $tablet-width) {
+    top: -4px;
+  }
+}
+
+.form-write-to-us__checkbox-input[type="checkbox"]:checked + .form-write-to-us__checkbox-mark::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 8px;
+  transform: translate(-50%, -50%);
+  background-color: $base-blue;
+  mask-image: url("/__spritemap#sprite-icon-check-view");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 10px 8px;
+}
+
+.form-write-to-us__checkbox-input:hover + .form-write-to-us__checkbox-mark,
+.form-write-to-us__checkbox-input:focus + .form-write-to-us__checkbox-mark {
+  background-color: $base-blue;
+}
+
+.form-write-to-us__checkbox-input[type="checkbox"]:hover:checked + .form-write-to-us__checkbox-mark::before {
+  background-color: $base-white;
+}
+
+.form-write-to-us__checkbox-input[type="checkbox"]:hover:checked + .form-write-to-us__checkbox-mark {
+  background-color: $base-blue;
+}
+
+.form-write-to-us__checkbox-input[type="checkbox"]:focus:checked + .form-write-to-us__checkbox-mark {
+  background-color: $base-blue;
+}
+
+.form-write-to-us__checkbox-input[type="checkbox"]:focus:checked + .form-write-to-us__checkbox-mark::before {
+  background-color: $base-white;
+}
+
+.form-write-to-us__checkbox-input[type="checkbox"]:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.form-write-to-us__checkbox-input[type="checkbox"]:checked:disabled + .form-write-to-us__checkbox-mark {
+  background-color: $base-gray-disabled;
+}
+
+.form-write-to-us__checkbox-input[type="checkbox"]:checked:disabled + .form-write-to-us__checkbox-mark::before {
+  background-color: $base-white;
+}
+
+.form-write-to-us__checkbox-input[type="checkbox"]:disabled + .form-write-to-us__checkbox-mark {
+  background-color: $base-white-middle-opacity;
+  border-color: $base-white;
+  pointer-events: none;
+  cursor: default;
+}
+
+.form-write-to-us__checkbox-text {
+  display: block;
+  max-width: 180px;
+  margin: 0;
+  margin-left: 30px;
+  padding: 0;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: left;
+  color: $base-white;
+  opacity: 0.9;
+
+  @media (min-width: $tablet-width) {
+    max-width: 304px;
+    line-height: 12px;
+  }
+}
+
+.form-write-to-us__checkbox-text br {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.form-write-to-us__button {
+  position: relative;
+  display: block;
+  min-width: 260px;
+  margin: 0;
+  margin-bottom: 12px;
+  padding: 15px 69px 15px 31px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 12px;
+  letter-spacing: 0.24px;
+  color: $base-white;
+  background-color: $base-blue;
+  text-transform: uppercase;
+  border: 1px solid $base-white;
+  border-radius: 30px;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 4px;
+    right: 5px;
+    width: 34px;
+    height: 34px;
+    background-color: $base-white;
+    border: none;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    cursor: pointer;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 50%;
+    right: 11px;
+    width: 10px;
+    height: 10px;
+    transform: translate(-50%, -50%);
+    background-color: $base-blue;
+    mask-image: url("/__spritemap#sprite-icon-button-blue-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 10px 10px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-width: 352px;
+    margin-bottom: 0;
+    padding: 20px 81px 20px 31px;
+    font-size: 14px;
+    line-height: 14px;
+
+    &::before {
+      width: 46px;
+      height: 46px;
+    }
+
+    &::after {
+      right: 17px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 10px;
+    padding: 19px 81px 19px 31px;
+  }
+
+  &:hover {
+    color: $base-blue;
+    background-color: $base-white;
+  }
+
+  &:focus {
+    color: $base-white;
+    background-color: $base-blue;
+    border: 1px solid $base-white;
+  }
+
+  &:active {
+    color: $base-medium-blue;
+    background-color: $base-white;
+  }
+
+  &:disabled {
+    color: $base-gray-disabled;
+    border-color: $base-gray-disabled;
+    pointer-events: none;
+    cursor: default;
+  }
+
+  &:hover::before {
+    background-color: $base-blue;
+  }
+
+  &:focus::before {
+    background-color: $base-white;
+  }
+
+  &:active::before {
+    background-color: $base-blue;
+  }
+
+  &:disabled::before {
+    background-color: $base-gray-disabled;
+  }
+
+  &:hover::after {
+    background-color: $base-white;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &:focus::after {
+    background-color: $base-blue;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &:active::after {
+    background-color: $base-light-blue;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &:disabled::after {
+    background-color: $base-white-middle-opacity;
+  }
+}

@@ -1,0 +1,62 @@
+.primary-icon {
+  position: absolute;
+  content: "";
+  background-color: $base-blue;
+  border: 1px solid transparent;
+  border-radius: 44px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $base-white;
+  }
+
+  &:focus {
+    background-color: $base-blue;
+  }
+
+  &:active {
+    background-color: $base-white;
+  }
+
+  &--disabled {
+    color: $base-gray-disabled;
+    pointer-events: none;
+    cursor: default;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    transform: translate(-50%, -50%);
+    background-color: $base-white;
+    mask-image: url("/__spritemap#sprite-icon-arrow-primary-button-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 10px 10px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  &:hover::after {
+    transform: translate(-50%, -50%) rotate(45deg);
+    background-color: $base-blue;
+  }
+
+  &:focus::after {
+    transform: translate(-50%, -50%) rotate(45deg);
+    background-color: $base-white;
+  }
+
+  &:active::after {
+    transform: translate(-50%, -50%) rotate(45deg);
+    background-color: $base-medium-blue;
+  }
+
+  &--disabled::after {
+    background-color: $base-white-middle-opacity;
+  }
+}

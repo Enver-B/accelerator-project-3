@@ -1,0 +1,22 @@
+.main {
+  position: relative;
+  flex-grow: 1;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.main__overlay {
+  &--active {
+    position: fixed;
+    inset: 0;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: $base-dark-overlay;
+    z-index: 4;
+  }
+}
